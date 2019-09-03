@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "/api/*.py", "use": "@now/python" },
+    { "src": "package.json", "use": "@now/next" }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1.py"
+    }
+  ]
+}
